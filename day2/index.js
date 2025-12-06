@@ -3,8 +3,8 @@ const ranges = data.split(",");
 const invalidIds = [];
 
 for(range of ranges){
-    const parsedRange = range.split("-");
-    const [from , to] = parsedRange;
+    const rangeValues = range.split("-");
+    const [from , to] = rangeValues;
     for( let x = Number(from); x <= Number(to); x++ ){
         const string = String(x);
         const length = string.length;
