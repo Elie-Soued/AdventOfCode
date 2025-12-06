@@ -8,11 +8,7 @@ for(range of ranges){
     for( let x = Number(from); x <= Number(to); x++ ){
         const string = String(x);
         const length = string.length;
-
-        const hasSameTwoDigits = length === 2 && string[0] === string[1];
-        const halfsAreTheSame = string.slice(0, length/2) == string.slice(length/2, length);
-
-        if( hasSameTwoDigits || halfsAreTheSame)  invalidIds.push(x)    
+        if(string.slice(0, length/2) == string.slice(length/2, length)) invalidIds.push(x);
     }
 }
 
